@@ -1,0 +1,32 @@
+#Print 함수 익히기 with 파이썬 (https://wikidocs.net/7014)
+#1~10번 문제 (기초부터 다시)
+
+1. print("Hellow World")
+2. print('신씨가 소리 질렀다. "도둑이야".')
+3. print("C:\Windows")
+4. print("안녕하세요.\n만나서 \t\t 반갑습니다.")
+#\n: 줄바꿈. \t: 탭
+
+Q5. print("오늘은", "일요일")의 예상 출력 코드는?
+[승호] 문자열인 '오늘은'과 '일요일'은 띄어쓰기 없이 '오늘은일요일'이라고 출력될 것 같다. > [오답]
+[답1] "오늘은 일요일", 여러 값을 동시에 출력하면서 공백이 추가됨. print("오늘은","일요일")도 마찬가지.
+[답2] 만약 print("오늘은""일요일")이라고 입력하면, "오늘은일요일"이라고 출력됨. 쉼표(,)의 역할에 공백1칸 포함.
+
+Q6. print()함수를 사용하여 다음과 같이 출력하라. > naver/kakao/sk/samsung
+[승호] print("naver/kakao/sk/samsung")
+[답1] print("naver", "kakao", "sk", "samsung", sep="/")
+<풀이> Sep Parameter in Python: Basically, it acts as a simple tool to modify the strings by replacing all spaces inside strings with the specified separator as an input value to the “sep” parameter 
+       = 매개변수 사이의 공백을 대체하는 매개변수
+
+> 응용(Q7) "NAVER;KAKAO;SK;SAMSUNG" 출력
+[승호] print("NAVER", "KAKAO", "SK", "SAMSUNG", sep=";")
+
+
+Q8. 다음 코드를 수정하여 줄바꿈이 없이 출력하세요. print("first");print("second")
+[승호] 우선, print("first");print("second")를 출력했을 때. print 함수는 각 값을 한 줄에 하나씩 보여준다. (Default of Python's print(): ends with a newline.)
+       = first
+         second 
+<풀이> print("first", end="");print("second") > firstsecond
+       만약, first와 second 사이에 공백을 포함하고 싶다면, end=" ". end 사이에 공백( )하나 넣기.
+- End Parameter in Python: The end=' ' is just to say that you want a space after the end of the statement instead of a new line character
+       #용어 default(디폴트): 응용 소프트웨어, 컴퓨터 프로그램 등에서는 '개입없이 자동으로 할당되는 설정 또는 값'
