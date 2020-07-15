@@ -1,0 +1,214 @@
+#NameError > print(print는 소문자로 쓰는 것을 약속했음), Print로 쓰는 경우에 발생.
+#name '___' is not defined.
+#\Print("Hello")
+
+print(1) #숫자형
+print("1") #string
+
+연산자(+, -, *, /)
+
+print(3+7)
+print(6*3)
+print(4**2)
+print(9%5)
+print("포기하고 싶지 않아")
+
+print('토끼' + '야 안녕!')
+# \print('데굴'*2.4) - TypeError: 문자열 곱하기는 '정수'만 가능 
+
+print('빨','주','노','초','파','남','보')
+print('빨'+'주'+'노'+'초'+'파'+'남'+'보')
+# +기능을 활용하면 공백없이 문자열을 더할 수 있다. 
+
+#변수: 값을 저장하는 공간 (무언가 들어가는 공간) 내가 저장해놓은 값
+rainbow = '빨주노초파남보'
+print(rainbow)
+
+rainbow = rainbow + '는 무지개'
+print(rainbow)
+
+#변수는 그저 그릇, 그릇 안에 담긴 재료가 어떤 자료형인가?
+coffee = 4100 #커피의 가격
+juice = 4600 #주스의 가격
+tea = 3900 #홍차의 가격
+
+coffee2 = "사"
+juice2 = "랑"
+tea2 = "해"
+
+order1 = coffee*3 + juice*2 + tea*1
+order2 = 4100*3 + 4600*2 + 3900*1
+order3 = coffee2*3 + juice2 + tea2
+print(order1)
+print(order2)
+print(order3)
+
+
+
+#기본 재료를 모으는 방법 = '변수'라는 상자들을 한 꺼번에 모아놓기
+
+리스트: [값1, 값2, 값3 ... ]
+append는 '리스트'에서만 사용할 수 있다.
+
+리스트는 append로 다음 순서에 계속해서 추가되는 성질.
+clovers = []
+clovers.append("안녕")
+print(clovers)
+
+clovers.append("나는 승호야")
+print(clovers)
+
+clovers.append("포기하고 싶지 않아")
+print(clovers)
+
+clovers.append("끝까지 해봐야지. 나의 방법으로")
+print(clovers)
+
+
+인덱스: 리스트 내 값들의 '주소'라고 생각하기
+
+star = ['클로버1', '하트2', '클로버3']
+print(star[1])
+
+#추가 및 대체
+star[1] = '스페이드1'
+print(star[1])
+
+print(star)
+
+del star[1]
+print(star)
+
+candies = ['딸기맛', '레몬맛', '수박맛', '박하맛', '우유맛']
+candies.append('콜라맛')
+candies.append('포도맛')
+
+del candies[3]
+print(candies)
+
+cat_candy = candies[0]
+duck_candy = candies[1]
+bird_candy = candies[3:6]
+
+print("체셔고양이에게는", cat_candy, "사탕을 줍니다")
+
+week = ['월', '화', '수', '목', '금', '토', '일']
+print(week)
+
+print(week[2:5])
+print(week)
+
+
+list에서 활용할 수 있는 method(함수)가 다양함. append, sort 실습
+animals = ['체셔고양이', '오리', '도도새']
+animals.sort()
+print(animals)
+
+list의 함수(method) .count 실습
+cards = ['하트', '클로버', '하트', '스페이드', '다이아', '하트', '다이아']
+print(cards.count('하트'))
+print(cards.count('다이아'))
+
+x = cards.count('스페이드')
+print(x)
+
+for num in range(10):
+    print("안녕 거북이", num+1)
+
+for의 기본 구조: 리스트에 있는 값을 모두 순회할 때까지 코드를 반복함. 
+for num in [0, 1, 2]:
+    print(num)
+
+for구문은 리스트 내의 값이 많아질수록 효율적! 
+players = ['공작부인', '흰 토기', '하트잭', '모자장수']
+for player in players:
+    print(player, "퇴장해!")
+
+
+for letter in "체셔고양이":
+    print(letter)
+
+
+for num in range(3):
+    print(num)
+
+for num in range(4, 10):
+    print(num)
+
+
+roese = ['하얀장미', '하얀장미', '하얀장미']
+
+for i in range(3):
+    roese[i] = '빨간장미'
+print(roese)
+
+
+star = ['하얀장미', '하얀장미', '하얀장미']
+for i in range(3):
+    roese[i] = '빨간장미'
+#range(n) n-1까지의 숫자를 불러오는 함수. 
+
+
+score = int(input("이 과목의 점수는? >>"))
+
+
+if 90 < score <= 100:
+    print("A입니다")
+
+elif 80 < score <= 90:
+    print("B입니다")
+
+elif 70 < score <= 80:
+    print("C입니다")
+
+else:
+    print("F입니다")
+
+ages = [22, 21, 17, 32, 4, 28, 19, 8]
+for age in ages:
+    if age >= 20:
+        print("{}세는 입장료 8,000입니다".format(age))
+    elif 20 > age >= 10:
+        print("{}는 입장료 5,000원 입니다".format(age))
+    else:
+        print("{}세는 입장료 2,500원입니다".format(age))
+
+total_price = 0
+ages = [22, 21, 17, 32, 4, 28, 19, 8]
+for age in ages:
+    if age >= 20:
+        total_price += 8000
+    elif 20 > age >= 10:
+        total_price += 5000
+    else:
+        total_price += 2500
+
+print("총입장료는", total_price, "원입니다", end="")
+
+
+total_price = 0
+ages = [22, 21, 17, 32, 4, 28, 19, 8]
+for age in ages:
+    if age >= 20:
+        total_price = total_price + 8000
+    elif 20 > age >= 10:
+        total_price = total_price + 5000
+    else:
+        total_price = total_price + 2500
+
+print("총입장료는", total_price, "원입니다")
+
+
+games = 7
+point = 25
+
+if games >= 10 and point >= 20:
+    print("mvp로 선정되었습니다")
+else:
+    print("mvp가 아닙니다")
+
+
+suspects = [['거위', '새', '암컷'], ['푸들', '개', '수컷'], ['비글', '개', '암컷']]
+for suspect in suspects:
+    if suspect[1] == "개" and suspect[2] == "암컷":
+        print("범인은", suspect[0], "입니다", end="")
