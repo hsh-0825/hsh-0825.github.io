@@ -202,6 +202,21 @@ print("총입장료는", total_price, "원입니다")
 games = 7
 point = 25
 
+
+#while은 조건이 거짓이 되기 전까지 무한 반복
+
+num=0
+while num <3:
+    print("안녕 거북이", num)
+    num += 1
+    
+count = 0
+while count <5:
+    count += 1
+    print(count, "바퀴입니다.")
+print("경주끝!")
+
+
 if games >= 10 and point >= 20:
     print("mvp로 선정되었습니다")
 else:
