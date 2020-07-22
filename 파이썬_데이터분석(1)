@@ -1,0 +1,82 @@
+import numpy as np
+
+arr1 = np.arange(15).reshape(3,5) 
+print(arr1)
+
+#np.arange(start, stop, step) 주로 start와 step은 생략됨. 고로, 0부터 14까지 1씩 증가하는 값
+#reshape는 3 by 5 행렬을 의미
+
+
+
+arr2 = np.zeros((3,4))
+print(arr2)
+
+#zeros는 행렬의 내용이 모두 '0'인 행렬 (영행렬)
+
+
+arr3 = np.array([[1,2,3],[4,5,6]], dtype=np.float64);print(arr3)
+
+#np.random.rand() 0부터 1사이의 균일 분포에서 난수 벡터/행렬 생성
+#np.random.rand(x)면 x인 벡터, np.random.rand(x,y) x by y인 행렬
+
+
+a2 = np.array([[1,2,3],[4,5,6]])
+print(a2, a2.shape, a2.ndim)
+
+#a2.shape x by y 행렬임을 나타내줌. 
+
+
+
+ary2 = np.array([range(i,i+2) for i in range(2,5)])
+print(ary2, "\n")
+
+#i가 2일 때, np.array([2,4])
+ary3 = np.array([2,3])
+print(ary3)
+
+#range(a:b)는 a부터 b-1까지를 의미
+
+
+
+
+a = np.zeros((2,2), dtype="int64");print(a,"\n") #영행렬
+b = np.ones((3,3), dtype=np.int64);print(b,"\n")
+c = np.full((2,3),5);print(c,"\n")
+
+d = np.eye(3);print(d,"\n") #단위행렬
+e = np.linspace(0,2,5);print(e,"\n") #0부터 2까지 5개의 균등한 숫자 생성
+
+
+
+
+
+a = np.array([[1,2,3],[4,5,6]])
+b = np.ones_like(a);print(b,"\n")
+c = np.zeros_like(a);print(c,"\n")
+
+#_like(x) x와 같은 n by m의 행렬로 만들라는 뜻!
+
+
+
+
+
+import matplotlib.pyplot as plt
+
+data = np.random.normal(0,1,10000)
+plt.hist(data, alpha = 0.5, bins = 100)
+plt.show()
+
+#np.random.normal (평균이 0이고, 편차가 1인 정규분포 난수 1만개)
+#plt.hist() 히스토그램
+#plt.show() 표 보여줘!
+
+
+
+arry1 = np.array([1,2,3,4,4,4,5,6,8,8,8])
+np.random.shuffle(arry1)
+
+arry2 = np.random.choice(ary1,5)
+print(arry2)
+
+arry3 = np.unique(arry1) #중복제거
+print(arry3)
